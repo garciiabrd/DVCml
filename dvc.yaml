@@ -7,3 +7,19 @@ stages:
     - model.pkl
     outs:
     - metrics.txt
+  evaluate_py:
+    cmd: python ed07alg.py
+    deps:
+    - ed07alg.py
+    - iris.csv
+    - model.pkl
+    outs:
+    - metrics2.txt
+  evaluate_py_run:
+    cmd: python ed07dvc.py
+    deps:
+    - ed07dvc.py
+    - iris.csv
+    - model.pkl
+    outs:
+    - metrics3.txt
