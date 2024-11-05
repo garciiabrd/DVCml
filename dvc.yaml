@@ -1,0 +1,9 @@
+stages:
+  evaluate_model:
+    cmd: python evaluate.py
+    deps:
+    - evaluate.py
+    - iris.csv
+    - model.pkl
+    outs:
+    - metrics.txt
